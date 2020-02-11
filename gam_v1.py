@@ -1,15 +1,23 @@
 #game v1
 
 import random
+import colorama
+from colorama import Fore, Back, Style
+colorama.init()
 import time
 time.sleep(3)
+def inw():
+	print("------------INVENTORY---------------")
+	print("axe: " + inventory.axe)
+	print("gun: " + inventory.gun)
+	print("life centre: " + inventory.life_centre)
 def rando():
 	class inventory:
 		axe = False
 		gun = False
 		life_centre = False
 	life = 10
-	b = random.randint(1, 6)
+	b = random.randint(1, 8)
 	if b == 1:
 		print("today is nothing happend!")
 	elif b == 3:
@@ -49,29 +57,43 @@ def gameplay():
 	rando()
 	print("press '1' for continue....")
 	con = input(" ")
+	if con == inv:
+		inw()
 	print("second day!")
 	rando()
 	print("press '1' for continue....")
 	con = input(" ")
+	if con == inventory:
+		inw()
 	print("third day!")
 	rando()
 	print("press '1' for continue....")
 	con = input(" ")
+	if con == inventory:
+		inw()
 	print("forth day!")
 	print("press '1' for continue....")
 	con = input(" ")
+	if con == inventory:
+		inw()
 	rando()
 	print("fifth day!")
 	print("press '1' for continue....")
 	con = input(" ")
+	if con == inventory:
+		inw()
 	rando()
 	print("sixth day!")
-	print("press '1' for continue....")
+	print("press ENTER for continue....")
 	con = input(" ")
+	if con == inventory:
+		inw()
 	rando()
 	print("seventh day!")
 	print("press '1' for continue....")
 	con = input(" ")
+	if con == inventory:
+		inw()
 	rando()
 	print("last day!")
 	print("we are at home!")
@@ -85,10 +107,13 @@ def gameplay():
 
 
 def main():
-	print("Welcome!")
-	print("1) Play! ")
+	print(Back.GREEN + "Welcome!")
+	print(Back.BLUE + "1) Play! ")
+	print(Style.RESET_ALL)
 	print("2) Creators")
-	print("3) exit")
+	print("             ")
+	print(Back.RED + "3) exit")
+	print(Style.RESET_ALL)
 	mainq = input("choose: ")
 	if mainq == 1:
 		print("game")
