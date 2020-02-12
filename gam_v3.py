@@ -1,4 +1,15 @@
-#game v1_buger_unstable_unrelease_BETA
+#game v3_buger_unstable_unrelease_BETA
+
+
+
+
+
+#  File "gam_v3.py", line 46, in rando
+    #print("there is your inventory: " + inw)
+	#TypeError: must be str, not type
+
+
+
 
 import random
 import colorama
@@ -8,16 +19,16 @@ import time
 time.sleep(3)
 def inw():
 	print("------------INVENTORY---------------")
-	print("axe: " + inventory.axe)
-	print("gun: " + inventory.gun)
-	print("life centre: " + inventory.life_centre)
+	print("axe: " + inw.axe)
+	print("gun: " + inw.gun)
+	print("life centre: " + inw.life_centre)
 def rando():
-	class inventory:
+	class inw:
 		axe = False
 		gun = False
 		life_centre = False
 	life = 10
-	b = random.randint(1, 8)
+	b = random.randint(1, 6)
 	if b == 1:
 		print("today is nothing happend!")
 	elif b == 3:
@@ -36,13 +47,14 @@ def rando():
 		print("we watch for some eat!")
 	elif b == 6:
 		print("we find axe!")
-		inventory.axe = True
+		inw.axe = True
 	elif b == 2:
 		print("we find life_centre")
 		inventory.life_centre = True
 	elif b == 4:
 		print("we find gun!")
-		inventory.gun = True
+		inw.gun = True
+	print("there is your inventory: " + inw)
 
 
 
@@ -57,43 +69,29 @@ def gameplay():
 	rando()
 	print("press '1' for continue....")
 	con = input(" ")
-	if con == inv:
-		inw()
 	print("second day!")
 	rando()
 	print("press '1' for continue....")
 	con = input(" ")
-	if con == inventory:
-		inw()
 	print("third day!")
 	rando()
 	print("press '1' for continue....")
 	con = input(" ")
-	if con == inventory:
-		inw()
 	print("forth day!")
 	print("press '1' for continue....")
 	con = input(" ")
-	if con == inventory:
-		inw()
 	rando()
 	print("fifth day!")
 	print("press '1' for continue....")
 	con = input(" ")
-	if con == inventory:
-		inw()
 	rando()
 	print("sixth day!")
 	print("press ENTER for continue....")
 	con = input(" ")
-	if con == inventory:
-		inw()
 	rando()
 	print("seventh day!")
 	print("press '1' for continue....")
 	con = input(" ")
-	if con == inventory:
-		inw()
 	rando()
 	print("last day!")
 	print("we are at home!")
