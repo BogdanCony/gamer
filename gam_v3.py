@@ -1,12 +1,9 @@
-#game v3_buger_unstable_unrelease_BETA
+#game v3
 
 
 
 
 
-#  File "gam_v3.py", line 46, in rando
-    #print("there is your inventory: " + inw)
-	#TypeError: must be str, not type
 
 
 
@@ -17,44 +14,43 @@ from colorama import Fore, Back, Style
 colorama.init()
 import time
 time.sleep(3)
-def inw():
-	print("------------INVENTORY---------------")
-	print("axe: " + inw.axe)
-	print("gun: " + inw.gun)
-	print("life centre: " + inw.life_centre)
+#def inww():
+	#print("------------INVENTORY---------------")
+	#print("axe: " + inw.axe)
+	#print("gun: " + inw.gun)
+	#print("life centre: " + inw.life_centre)
 def rando():
 	class inw:
-		axe = False
-		gun = False
-		life_centre = False
-	life = 10
+		axe = True
+		gun = True
+		life_centre = True
 	b = random.randint(1, 6)
+	life = 10
 	if b == 1:
 		print("today is nothing happend!")
 	elif b == 3:
 		print("Raders is here!")
-		if inventory.axe == True:
+		if inw.axe == True:
 			print("use axe?")
 			axe1 = input("yes or no")
-			if axe1 == yes:
+			if axe1 == "yes":
 				pass
-		else:
-			print("- 1 life")
-			life -= 1
-			print(life)
+			elif axe1 == "no":
+				print("- 1 life")
+				life - 1
+				print(life)
 
 	elif b == 5:
 		print("we watch for some eat!")
 	elif b == 6:
 		print("we find axe!")
-		inw.axe = True
+		inw.axe = "yes"
 	elif b == 2:
 		print("we find life_centre")
-		inventory.life_centre = True
+		inw.life_centre = "yes"
 	elif b == 4:
 		print("we find gun!")
-		inw.gun = True
-	print("there is your inventory: " + inw)
+		inw.gun = "yes"
 
 
 
